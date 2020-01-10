@@ -1,0 +1,15 @@
+
+@media (min-width: 769px)
+.angled{
+	height: 200px;
+}
+
+.angled{
+
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: #7166ff;
+    margin-top: 100px;
+}
+
