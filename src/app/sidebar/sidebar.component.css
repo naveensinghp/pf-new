@@ -7,11 +7,17 @@ body {
 .homelink.is-active{
   border-top: 3px solid #ff1d6f;
 }
-a {
-    color: #db0a5b;
-    cursor: pointer;
-    text-decoration: none;
+
+.menu-active a.is-exact-active{
+  color: #ff1d6f;
 }
+
+.menu-active {
+    border-left: 2px solid #ff1d6f;
+    
+}
+
+
 .sidebar {
   font-family:Nunito Sans,sans-serif;
   text-align: center;
