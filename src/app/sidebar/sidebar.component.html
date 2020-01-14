@@ -1,15 +1,23 @@
 <div class="sidebar">
 	<span class="homelink is-active"></span>
-	<a class="active" href="#home"><img src="assets/boy.png" width="50"></a>
-  <a class="is-exact-active menu-active" href="#home">About</a>
-  <a href="#news">Skills</a>
+	<a class="active" href=""><img src="assets/boy.png" width="50"></a>
+
+
+  <!-- <a class="is-exact-active menu-active" href="#home">About</a> -->
+  <a routerLinkActive="" routerLink="">About</a>
+  <a routerLinkActive="{'is-exact-active menu-active' : is-exact-active menu-active =='skills'}" routerLink="skills">Skills</a>
   <a href="#contact">Blogs</a>
   <a href="#about">Contact</a>
 </div>
 
-<div class="content">
-  <h2 style="text-align: center;font-family:Nunito Sans,sans-serif;">Hello World</h2>
- 
-  <footer></footer>
-</div>
 
+
+<div class="content">
+	<skills></skills>
+	<br/><br/><br/><br/>
+	<homepage></homepage>
+	<div id="footer" style="position: absolute;width: 88%;bottom: 0;padding-left:10px;">
+		<footer></footer>
+	</div>
+
+</div>
