@@ -1,0 +1,48 @@
+.sidenav-container {
+  height: 100%;
+  font-family:Nunito Sans,sans-serif;
+}
+
+.sidenav {
+  width: 200px;
+  font-family:Nunito Sans,sans-serif;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.center-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+
+.menustyle{
+
+  font-family:Nunito Sans,sans-serif;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+
+
+.menu-active {
+  border-left: 2px solid #ff1d6f;
+  background-color: #eff5f5;
+
+}
+
+.tt .hh h2 {
+  float: right;
+}

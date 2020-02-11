@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
 body {
   margin: 0;
   font-family:Nunito Sans,sans-serif;
@@ -16,4 +19,22 @@ h1, h2, h3, h4, h5, h6 {
   background: #ff6583;
   border-radius: 20px;
   margin-top: 8px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+@font-face{
+	font-family: 'godofwar';
+	src: url(/assets/godofwar.otf);
+	
+}
+
+.godofwar {
+	font-family: "godofwar",serif;
+	font-size: 30px;
+	white-space: nowrap;
+	color: #424242;
+	letter-spacing: 0.30em;
 }
