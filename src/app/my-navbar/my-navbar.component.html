@@ -1,41 +1,99 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>
-      <a class="active" href=""><img src="assets/boy.png" width="50"></a>
+<!-- <app-my-navbar>
+    <router-outlet></router-outlet>
+    <footer></footer>
+</app-my-navbar> -->
+<div [class.start]="otherThemes">
+<mat-toolbar id="mainToolbar" color="primary">
+  <!-- <mat-icon
+    (click)="onToolbarMenuToggle()"
+    id="toolbarMenu">subject</mat-icon>
+  My Awesome App -->
+  <span class="toolbar-spacer"></span>
+  <mat-icon *ngIf="!showIcon"
+    class="toolbar-icon"
+    matBadge="8"
+    matBadgePosition="after"
+    matBadgeColor="accent"
+    (click)="changeTheme()"
+    (click)="showIcon =! showIcon"
+  >wb_sunny</mat-icon>
 
-    </mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item routerLinkActive="{'is-exact-active menu-active' : is-exact-active menu-active =='skills'}" routerLink="skills" class="menustyle" href="#">Skills</a>
-      <a mat-list-item routerLinkActive="{'is-exact-active menu-active' : is-exact-active menu-active =='blogs'}" routerLink="blogs" class="menustyle" href="#">Blog</a>
-      <a mat-list-item routerLinkActive="{'is-exact-active menu-active' : is-exact-active menu-active =='contact'}" routerLink="contact" class="menustyle" href="#">Contact</a>
-    </mat-nav-list>
+<mat-icon *ngIf="showIcon"
+    class="toolbar-icon"
+    matBadge="8"
+    matBadgePosition="after"
+    matBadgeColor="accent"
+    (click)="changeTheme()"
+    (click)="showIcon =! showIcon"
+  >brightness_3</mat-icon>
+</mat-toolbar>
+
+<!-- 
+<i *ngIf="!showIcon" (click)="changeTheme()" (click)="onclick()" style="cursor:pointer;padding-left: 97%;" class="material-icons" (click)="showIcon =! showIcon">wb_sunny</i>
+<i *ngIf="showIcon" (click)="changeTheme()" style="cursor:pointer;padding-left: 97%;" class="material-icons" (click)="showIcon =! showIcon">nights_stay</i> -->
+
+<mat-sidenav-container
+  id="sidenavContainer"
+ fullscreen>
+  <mat-sidenav
+    mode="side"
+    #sidenav
+    id="sidenav"
+    [class.menu-open]="isMenuOpen"
+    [class.menu-close]="!isMenuOpen"
+    opened>
+    
+    <mat-list id="menus">
+      <!-- <mat-card>
+        <mat-card-header>
+          <div 
+            mat-card-avatar 
+            class="avatar"></div>
+
+          <mat-card-title>John Doe</mat-card-title>
+          <mat-card-subtitle>Internal</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card> -->
+      <mat-list-item routerLinkActive="{'is-exact-active menu-active' : is-exact-active menu-active ==''}" routerLink="">
+        <button 
+        class="menu-item"
+          mat-flat-button>
+          <mat-icon>home</mat-icon>
+        Skills</button>
+      </mat-list-item>
+
+      <mat-list-item routerLinkActive="{'is-exact-active menu-active' : is-exact-active menu-active =='skills'}" routerLink="skills">
+        <button 
+        class="menu-item"
+          mat-flat-button>
+          <mat-icon>code</mat-icon>
+        Skills</button>
+      </mat-list-item>
+
+      <mat-list-item routerLinkActive="{'is-exact-active menu-active' : is-exact-active menu-active =='blogs'}" routerLink="blogs" class="menustyle">
+          <button 
+          class="menu-item"
+            mat-flat-button>
+            <mat-icon>menu_book</mat-icon>
+          Blog</button>
+        </mat-list-item>
+
+        <mat-list-item routerLinkActive="{'is-exact-active menu-active' : is-exact-active menu-active =='contact'}" routerLink="contact" class="menustyle">
+            <button 
+            class="menu-item"
+              mat-flat-button>
+              <mat-icon>forum</mat-icon>
+            Contact</button>
+          </mat-list-item>
+
+    </mat-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span style="float: right;">
-        <i class="material-icons">
-        nights_stay
-        </i>
-      </span>
-      <div class="tt">
-        <div class="hh">
-          <h2>Hello</h2>
-        </div>
-      </div>
-    </mat-toolbar>
-    <!-- Add Content Here -->
-    <ng-content></ng-content>
-    <!-- <h4 class="godofwar center-me" style="text-align: center;"> NAVEEN SINGH</h4> -->
+
+  <mat-sidenav-content
+  [ngStyle]="{ 'margin-left.px': contentMargin }"
+  >
+  <ng-content></ng-content>
+
   </mat-sidenav-content>
 </mat-sidenav-container>
+</div>

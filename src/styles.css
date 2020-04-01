@@ -1,9 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@ctrl/ngx-emoji-mart/picker';
+@import "~bootstrap/dist/css/bootstrap.css";
 
 
-body {
+
+
+
+html,body {
   margin: 0;
+  height: 100%;
+bottom: 0px;
   font-family:Nunito Sans,sans-serif;
 }
 
@@ -21,8 +28,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 8px;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 @font-face{
@@ -31,10 +36,124 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 	
 }
 
+
 .godofwar {
 	font-family: "godofwar",serif;
 	font-size: 30px;
 	white-space: nowrap;
-	color: #424242;
-	letter-spacing: 0.30em;
+	letter-spacing: 0.20em;
+}
+
+.hr {
+  border-top-width:8px;
+  border-color: #ff6583;
+}
+
+
+/* ANIMATION */
+
+/* defines the animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+p {
+
+  opacity: 0;
+
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+
+  &.first {
+    animation-delay: 1s;
+  }
+  &.second {
+    animation-delay: 3s;
+  }
+  &.third {
+    animation-delay: 5s;
+  }
+  &.fourth {
+    animation-delay: 7s;
+  }
+  &.fifth {
+    animation-delay: 9s;
+  }
+  &.sixth {
+    animation-delay: 11s;
+  }
+ }
+
+
+ #toolbarMenu {
+  cursor: pointer;
+  margin-right: 20px;
+}
+#mainToolbar .toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+#mainToolbar .toolbar-icon {
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+#sidenavContainer {
+  margin-top: 64px;
+}
+
+#sidenav {
+  width: 240px;
+}
+
+#sidenav.menu-close {
+  width: 70px
+}
+
+#sidenav.menu-open {
+  width: 240px
+}
+
+#sidenav .avatar {
+  background-image: url('assets/boy.png');
+  background-size: cover;
+}
+
+#sidenav .mat-list-item-content {
+  padding: 0;
+}
+
+#sidenav .menu-item {
+  width: 100%;
+  font-family:Nunito Sans,sans-serif;
+  font-weight: bold;
+  border-radius: 0;
+  text-align: left;
+  padding: 10px;
+}
+
+#sidenav .menu-item:hover {
+background: #eee;
+}
+#sidenav .menu-item mat-icon {
+  margin-right: 20px;
+  margin-left: 12px;
+}
+
+.dash-list h3 {
+  padding: 12px;
+}
+
+
+button {
+  outline: none !important; 
 }

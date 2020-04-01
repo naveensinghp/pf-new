@@ -11,6 +11,7 @@
     background: #ff1d6f;
     color: #fff;
     padding-left: 10px;
+    font-size: 150x;
     padding-right: 10px;
     margin-left: 7px;
 }
@@ -76,4 +77,22 @@ span {
 .bracket-right {
 	color: #4A4A4A;
     padding-left: 15px;
+}
+
+
+@media (max-width: 460px){
+.maintitle {
+    font-size: 10px;
+}
+.sub {
+    text-align: center;
+    font-size: 18px;
+    color: #ff1d6f;
+    border-top: 4px solid #ff4081;
+}
+.socialmedia {
+  color: red;
+  padding-left: 22%;
+  font-size: 25px;
+}
 }

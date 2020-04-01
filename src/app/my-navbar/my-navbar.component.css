@@ -1,4 +1,4 @@
-.sidenav-container {
+/* .sidenav-container {
   height: 100%;
   font-family:Nunito Sans,sans-serif;
 }
@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
   height: 65vh;
-}
+} */
 
 .menustyle{
 
@@ -33,16 +33,41 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  
+
+
 }
 
+.homelink.is-active{
+  border-top: 3px solid #ff1d6f;
+}
 
 .menu-active {
-  border-left: 2px solid #ff1d6f;
-  background-color: #eff5f5;
+color: #ff1d6f;
+} 
 
+.button {
+  background-color: #1da1f2;
+  border: none;
+  color: white;
+  padding: 6px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
-.tt .hh h2 {
-  float: right;
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: beige;
 }
+.mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+  
+  height: 140px;
+}
+
+

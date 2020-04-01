@@ -2,6 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {SkillsComponent} from './skills/skills.component';
+import { EmojiModule } from '@ctrl/ngx-emoji-mart/ngx-emoji';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +24,23 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { BlogsComponent } from './blogs/blogs.component';
+import { FusionChartsModule } from "angular-fusioncharts";
+import * as FusionCharts from "fusioncharts";
+import * as charts from "fusioncharts/fusioncharts.charts";
+import * as FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
+import { ChartComponent } from './chart/chart.component';
+import { PickerModule } from '@ctrl/ngx-emoji-mart';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { HighLight } from './highlighter.directive';
+
+
+
+
+
+
+
+FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
 
 @NgModule({
   declarations: [
@@ -28,7 +51,10 @@ import { BlogsComponent } from './blogs/blogs.component';
     SkillsComponent,
     ContactComponent,
     MyNavbarComponent,
-    BlogsComponent
+    BlogsComponent,
+    HighLight,
+    ChartComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -39,7 +65,16 @@ import { BlogsComponent } from './blogs/blogs.component';
       MatButtonModule,
       MatSidenavModule,
       MatIconModule,
-      MatListModule
+      MatListModule,
+      FusionChartsModule,
+      PickerModule,
+      MatFormFieldModule,
+      EmojiModule,
+      MatInputModule,
+      MatCardModule,
+      MatTooltipModule,
+      MatSnackBarModule,
+      FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,7 +4,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']
+  styleUrls: ['./homepage.component.css'],
+  
 })
 export class HomepageComponent implements OnInit {
 
